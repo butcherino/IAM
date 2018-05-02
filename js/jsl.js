@@ -2,7 +2,36 @@
  * Created by master on 01.03.16.
  */
 var listenersSet;
+var main, header, ul;
 
+// Transition bei Headerclick css Klasse wechseln
+function initialiseView() {
+    header = document.getElementsByTagName("header")[0];
+    main = document.querySelector("main");
+    ul = document.getElementsByTagName("ul")[0];
+
+    // fade läuft einmal durch und endet
+    function ontransitionend () {
+        main.classList.toggle("faded");
+        main.removeEventListener("transitionend",ontransitionend);
+    }
+
+    header.onclick = function() {
+        main.classList.toggle("faded");
+        main.addEventListener("transitionend",ontransitionend);
+    }
+
+    // Auswahl in der Liste
+    ul.querySelectorAll("li").forEach(function(currentLi) {
+        currentLi.onclick = function () {
+            alert("selected: " +  currentLi.querySelector("h2").textContent)
+        }
+
+
+    });
+
+}
+// Alte vorgegebene Ansicht
 // a function that reacts to the selection of a list item
 function onListItemSelected(event) {
     // check in which phase we are

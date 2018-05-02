@@ -14,7 +14,9 @@
     <!-- add the "library" script wrapping XMLHttpRequest -->
     <script type="application/javascript" src="js/lib/xhr.js"></script>
 </head>
-<body>
+
+<!-- hier greift jsl.js ein -->
+<body onload="initialiseView()">
     <header>
         <button class="align-left menu imgbutton">Menu</button>
         <h1 class="align-left fill-right">Medienliste</h1>
@@ -24,12 +26,12 @@
 
     <main>
         <ul>
-            <li>sdfgsdh<button class="imgbutton align-right fill-left edit">edit</button></li>
-            <li>sfdg<button class="imgbutton align-right fill-left edit">edit</button></li>
-            <li>hjtz<button class="imgbutton align-right fill-left edit">edit</button></li>
-            <li>fghjzjj<button class="imgbutton align-right fill-left edit">edit</button></li>
-            <li>ghhgj<button class="imgbutton align-right fill-left edit">edit</button></li>
-            <li>fgzzrhl<button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/100/100/city"><h2>lorem</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/200/200/city"><h2>ipsum</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/100/100/city"><h2>dolor</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/400/100/city"><h2>sit</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/100/100/city"><h2>lorem</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
+            <li><img src="https://placeimg.com/200/500/city"><h2>lorem</h2><button class="imgbutton align-right fill-left edit">edit</button></li>
 
         </ul>
     </main>

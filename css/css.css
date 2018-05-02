@@ -136,3 +136,29 @@ li {
     padding-left: 10px;
     display: flex;
 }
+
+li h2 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    font-size: 22pt;
+}
+
+li img {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* faded */
+main.faded {
+    opacity: 0.0;
+    transition: opacity 2s;
+}
+
+main {
+    opacity: 1.0;
+    transition: opacity 1s;
+}
