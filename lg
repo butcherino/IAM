@@ -1,0 +1,53 @@
+[33mcommit 3198731d5bd66a14c44895d872e24fe30d82db96[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Tue Feb 6 11:27:58 2018 +0100
+
+    changed image provider
+
+[33mcommit b53113a50f793edd9990b4587ed27a676c77c648[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Mon Feb 5 20:35:12 2018 +0100
+
+    use flexbox
+
+[33mcommit 1e104984d7ad0ac29837d9d37ef975f9b870ed62[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Mon Jul 31 16:46:02 2017 +0200
+
+    modify date on listitems
+
+[33mcommit 22bebaaec5473a0f36162b4c89c72e7c87ef6e8d[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Mon Jul 31 12:41:15 2017 +0200
+
+    remove reference to deprecated and unused sys module
+
+[33mcommit cdf70af8d109b37f6c7ebf307a142e930a2f75a5[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Wed Mar 2 21:14:28 2016 +0100
+
+    restore license file with uppercase spelling
+
+[33mcommit 8afb4d23557067c296d0bcbc3cd829d862da600c[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Wed Mar 2 21:13:38 2016 +0100
+
+    delete license file
+
+[33mcommit 7648e1f5331163283873c95e46f2e059a28a9390[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Wed Mar 2 19:18:33 2016 +0100
+
+    added license file for glyphicons
+
+[33mcommit 97dad585a2f763aa627c120300c5188a24b63163[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Wed Mar 2 19:10:38 2016 +0100
+
+    added some more functionality and glyphicons
+
+[33mcommit fad3ed8f36cd2d60eb69be7cc3a8e82211e36944[m
+Author: jk <joern.kreutel@beuth-hochschule.de>
+Date:   Tue Mar 1 23:37:19 2016 +0100
+
+    Initial commit
