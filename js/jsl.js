@@ -2,13 +2,20 @@
  * Created by master on 01.03.16.
  */
 var listenersSet;
-var main, header, ul;
+var main, header, ul, add;
+var litemplate;
 
 // Transition bei Headerclick css Klasse wechseln
 function initialiseView() {
     header = document.getElementsByTagName("header")[0];
     main = document.querySelector("main");
     ul = document.getElementsByTagName("ul")[0];
+    add = document.getElementsByClassName("add")[0];
+
+    litemplate = ul.getElementsByTagName("li")[0];
+    ///////////////////////////////////////////////////////////////////
+    // HIER WEITERMACHEN!
+    ///////////////////////////////////////////////////////////////////
 
     // fade läuft einmal durch und endet
     function ontransitionend () {
@@ -21,16 +28,71 @@ function initialiseView() {
         main.addEventListener("transitionend",ontransitionend);
     }
 
-    // Auswahl in der Liste
-    ul.querySelectorAll("li").forEach(function(currentLi) {
-        currentLi.onclick = function () {
-            alert("selected: " +  currentLi.querySelector("h2").textContent)
+    function lookupLi(el) {
+
+        if (el.tagName == "LI") {
+            return el;
         }
+        else if (el.tagName == "UL") {
+            console.error("lookupLi(): have reached list root", el);
+            return null;
+        }
+        else if (el.parentNode) {
+            return lookupLi(el.parentNode);
+        }
+        else {
+            console.error("lookupLi(): something has gone wrong, got: ", el)
+        }
+    }
 
+    function onlistitemSelected(event){
+        var li = lookupLi(event.target);
+        if (li) {
+            alert("selected: " + li.querySelector("h2").textContent);
+        }
+        else {
+            alert("something went wrong!");
+        }
+    }
 
-    });
+    // Auswahl in der Liste
+    //ul.querySelectorAll("li").forEach(function(currentLi) {
+      //  currentLi.onclick = onlistitemSelected;
+      // });
 
+    ul.onclick = onlistitemSelected;
+
+    function addNewListitem(obj) {
+       // alert("add new element: " + JSON.stringify(obj));
+
+        //var li = document.createElement("li");
+        //var img = document.createElement("img");
+        //img.src = obj.src;
+        //li.appendChild(img);
+        //var h2 = document.createElement("h2");
+        //h2.textContent =obj.name;
+        //li.appendChild(h2);
+        //var button = document.createElement("button");
+        //button.setAttribute("class","imgbutton align-right edit fill-left");
+        //li.appendChild(button);
+
+        var li = ul.querySelector("li").cloneNode(true);
+        li.querySelector("h2").textContent = obj.name;
+        li.querySelector("img").src = obj.src;
+
+        ul.appendChild(li);
+    }
+
+    add.onclick = function (event) {
+        event.stopPropagation();
+        var newItemFactor = (Date.now() % 10)+1;
+        var newItem = {name: "item" + newItemFactor, src: "https://placeimg.com/100/" + newItemFactor*100 + "/city"};
+        addNewListitem(newItem);
+    }
 }
+
+
+
 // Alte vorgegebene Ansicht
 // a function that reacts to the selection of a list item
 function onListItemSelected(event) {
